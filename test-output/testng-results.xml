@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="4" failed="7" skipped="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Search text field is present on the page]]>
+    </line>
+    <line>
+      <![CDATA[The title of the page do not have search term]]>
+    </line>
+    <line>
+      <![CDATA[The Count of Monte Cristo]]>
+    </line>
+    <line>
+      <![CDATA[Most Influential Classics of All Time (Box Set of 4 Books)]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code: (Robert Langdon Book 2)]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code (Abridged Edition)]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code: (Robert Langdon Book 2)+Angels and Demons: (Robert Langdon Book 1)+Digital Fortress(Set of 3books)]]>
+    </line>
+    <line>
+      <![CDATA[DA VINCI CODE]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code: A Novel: 2 (Robert Langdon)]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code Revisited]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code]]>
+    </line>
+    <line>
+      <![CDATA[World’s Greatest Classics (Box Set of 4 Books)]]>
+    </line>
+    <line>
+      <![CDATA[War & Peace]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code: (Robert Langdon Book 2)+The Lost Symbol: (Robert Langdon Book 3)(Set of 2books)]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code: The Background Explained]]>
+    </line>
+    <line>
+      <![CDATA[Davinci Code]]>
+    </line>
+    <line>
+      <![CDATA[THE DA VINCI CODE : A QUEST FOR ANSWERS (Hindi) हिंदी]]>
+    </line>
+    <line>
+      <![CDATA[Fact and Fiction in "The Da Vinci Code"]]>
+    </line>
+    <line>
+      <![CDATA[The Da Vinci Code: (Robert Langdon Book 2)+Angels and Demons: (Robert Langdon Book 1)+Deception Point(Set of 3books)]]>
+    </line>
+    <line>
+      <![CDATA[Cracking the Da Vinci Code: The Unauthorized Guide to the Facts Behind the Fiction]]>
+    </line>
+    <line>
+      <![CDATA[Greatest Tragedies of Shakespeare (Deluxe Hardbound Edition)]]>
+    </line>
+    <line>
+      <![CDATA[The Republic]]>
+    </line>
+    <line>
+      <![CDATA[The title of the page do not have search term]]>
+    </line>
+    <line>
+      <![CDATA[BLUEWUD Noel Engineered Wood Rectangular Shape Coffee Table/Centre Table with Storage (Wenge)]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-03-24T11:23:46 IST" name="Test Automation" finished-at="2022-03-24T11:24:57 IST" duration-ms="71303">
+    <groups>
+    </groups>
+    <test started-at="2022-03-24T11:23:46 IST" name="Functional Testing" finished-at="2022-03-24T11:24:57 IST" duration-ms="71303">
+      <class name="com.qa.testscripts.TC_Amazon_002">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_002@47987356]" started-at="2022-03-24T11:23:46 IST" name="setUp" finished-at="2022-03-24T11:24:06 IST" duration-ms="19451" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.amazon.in/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchItem(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_002@47987356]" started-at="2022-03-24T11:24:10 IST" name="searchItem" data-provider="getData" finished-at="2022-03-24T11:24:17 IST" duration-ms="7226" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Books]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Da Vinci Code]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at com.qa.testscripts.TC_Amazon_002.searchItem(TC_Amazon_002.java:55)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[The title of the page do not have search term]]>
+            </line>
+            <line>
+              <![CDATA[The Count of Monte Cristo]]>
+            </line>
+            <line>
+              <![CDATA[Most Influential Classics of All Time (Box Set of 4 Books)]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code: (Robert Langdon Book 2)]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code (Abridged Edition)]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code: (Robert Langdon Book 2)+Angels and Demons: (Robert Langdon Book 1)+Digital Fortress(Set of 3books)]]>
+            </line>
+            <line>
+              <![CDATA[DA VINCI CODE]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code: A Novel: 2 (Robert Langdon)]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code Revisited]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code]]>
+            </line>
+            <line>
+              <![CDATA[World’s Greatest Classics (Box Set of 4 Books)]]>
+            </line>
+            <line>
+              <![CDATA[War & Peace]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code: (Robert Langdon Book 2)+The Lost Symbol: (Robert Langdon Book 3)(Set of 2books)]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code: The Background Explained]]>
+            </line>
+            <line>
+              <![CDATA[Davinci Code]]>
+            </line>
+            <line>
+              <![CDATA[THE DA VINCI CODE : A QUEST FOR ANSWERS (Hindi) हिंदी]]>
+            </line>
+            <line>
+              <![CDATA[Fact and Fiction in "The Da Vinci Code"]]>
+            </line>
+            <line>
+              <![CDATA[The Da Vinci Code: (Robert Langdon Book 2)+Angels and Demons: (Robert Langdon Book 1)+Deception Point(Set of 3books)]]>
+            </line>
+            <line>
+              <![CDATA[Cracking the Da Vinci Code: The Unauthorized Guide to the Facts Behind the Fiction]]>
+            </line>
+            <line>
+              <![CDATA[Greatest Tragedies of Shakespeare (Deluxe Hardbound Edition)]]>
+            </line>
+            <line>
+              <![CDATA[The Republic]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method signature="searchItem(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_002@47987356]" started-at="2022-03-24T11:24:17 IST" name="searchItem" data-provider="getData" finished-at="2022-03-24T11:24:20 IST" duration-ms="3232" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Electronics]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mobile phones]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.nio.file.FileSystemException">
+            <message>
+              <![CDATA[D:\Capgemini\TestAutomation.Selenium\Screenshots\searchItem.png: The process cannot access the file because it is being used by another process]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.nio.file.FileSystemException: D:\Capgemini\TestAutomation.Selenium\Screenshots\searchItem.png: The process cannot access the file because it is being used by another process
+at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+at java.base/sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:171)
+at java.base/sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:284)
+at java.base/java.nio.file.Files.copy(Files.java:1305)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:850)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:756)
+at com.qa.testscripts.TestBase.captureScreenshot(TestBase.java:76)
+at com.qa.testscripts.TC_Amazon_002.searchItem(TC_Amazon_002.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.nio.file.FileSystemException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method signature="searchItem(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_002@47987356]" started-at="2022-03-24T11:24:20 IST" name="searchItem" data-provider="getData" finished-at="2022-03-24T11:24:24 IST" duration-ms="3432" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Furniture]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Wooden tables]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [true] but found [false]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at com.qa.testscripts.TC_Amazon_002.searchItem(TC_Amazon_002.java:55)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[The title of the page do not have search term]]>
+            </line>
+            <line>
+              <![CDATA[BLUEWUD Noel Engineered Wood Rectangular Shape Coffee Table/Centre Table with Storage (Wenge)]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method signature="searchItem(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_002@47987356]" started-at="2022-03-24T11:24:24 IST" name="searchItem" data-provider="getData" finished-at="2022-03-24T11:24:28 IST" duration-ms="3995" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Appliances]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Washing machines]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.nio.file.FileSystemException">
+            <message>
+              <![CDATA[D:\Capgemini\TestAutomation.Selenium\Screenshots\searchItem.png: The process cannot access the file because it is being used by another process]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.nio.file.FileSystemException: D:\Capgemini\TestAutomation.Selenium\Screenshots\searchItem.png: The process cannot access the file because it is being used by another process
+at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+at java.base/sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:171)
+at java.base/sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:284)
+at java.base/java.nio.file.Files.copy(Files.java:1305)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:850)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:756)
+at com.qa.testscripts.TestBase.captureScreenshot(TestBase.java:76)
+at com.qa.testscripts.TC_Amazon_002.searchItem(TC_Amazon_002.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.nio.file.FileSystemException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method signature="searchItem(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_002@47987356]" started-at="2022-03-24T11:24:28 IST" name="searchItem" data-provider="getData" finished-at="2022-03-24T11:24:33 IST" duration-ms="5603" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Baby]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[soaps]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.nio.file.FileSystemException">
+            <message>
+              <![CDATA[D:\Capgemini\TestAutomation.Selenium\Screenshots\searchItem.png: The process cannot access the file because it is being used by another process]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.nio.file.FileSystemException: D:\Capgemini\TestAutomation.Selenium\Screenshots\searchItem.png: The process cannot access the file because it is being used by another process
+at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+at java.base/sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:171)
+at java.base/sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:284)
+at java.base/java.nio.file.Files.copy(Files.java:1305)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:850)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:756)
+at com.qa.testscripts.TestBase.captureScreenshot(TestBase.java:76)
+at com.qa.testscripts.TC_Amazon_002.searchItem(TC_Amazon_002.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.nio.file.FileSystemException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method signature="searchItem(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_002@47987356]" started-at="2022-03-24T11:24:33 IST" name="searchItem" data-provider="getData" finished-at="2022-03-24T11:24:37 IST" duration-ms="3358" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Beauty]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Shampoo]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.nio.file.FileSystemException">
+            <message>
+              <![CDATA[D:\Capgemini\TestAutomation.Selenium\Screenshots\searchItem.png: The process cannot access the file because it is being used by another process]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.nio.file.FileSystemException: D:\Capgemini\TestAutomation.Selenium\Screenshots\searchItem.png: The process cannot access the file because it is being used by another process
+at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+at java.base/sun.nio.fs.WindowsFileCopy.copy(WindowsFileCopy.java:171)
+at java.base/sun.nio.fs.WindowsFileSystemProvider.copy(WindowsFileSystemProvider.java:284)
+at java.base/java.nio.file.Files.copy(Files.java:1305)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:850)
+at org.apache.commons.io.FileUtils.copyFile(FileUtils.java:756)
+at com.qa.testscripts.TestBase.captureScreenshot(TestBase.java:76)
+at com.qa.testscripts.TC_Amazon_002.searchItem(TC_Amazon_002.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.nio.file.FileSystemException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testscripts.TC_Amazon_002@47987356]" started-at="2022-03-24T11:24:37 IST" name="tearDown" finished-at="2022-03-24T11:24:37 IST" duration-ms="388" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.testscripts.TC_Amazon_002 -->
+      <class name="com.qa.testscripts.TC_Amazon_003">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_003@5acf93bb]" started-at="2022-03-24T11:23:46 IST" name="setUp" finished-at="2022-03-24T11:24:07 IST" duration-ms="20471" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.amazon.in/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="getCategoryList()[pri:1, instance:com.qa.testscripts.TC_Amazon_003@5acf93bb]" started-at="2022-03-24T11:24:07 IST" name="getCategoryList" finished-at="2022-03-24T11:24:07 IST" duration-ms="632" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [45] but found [43]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [45] but found [43]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:907)
+at org.testng.Assert.assertEquals(Assert.java:917)
+at com.qa.testscripts.TC_Amazon_003.getCategoryList(TC_Amazon_003.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getCategoryList -->
+        <test-method signature="getAllItems()[pri:2, instance:com.qa.testscripts.TC_Amazon_003@5acf93bb]" started-at="2022-03-24T11:24:07 IST" name="getAllItems" finished-at="2022-03-24T11:24:07 IST" depends-on-methods="com.qa.testscripts.TC_Amazon_003.getCategoryList" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TC_Amazon_003.getAllItems()[pri:2, instance:com.qa.testscripts.TC_Amazon_003@5acf93bb] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TC_Amazon_003.getAllItems()[pri:2, instance:com.qa.testscripts.TC_Amazon_003@5acf93bb] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAllItems -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testscripts.TC_Amazon_003@5acf93bb]" started-at="2022-03-24T11:24:07 IST" name="tearDown" finished-at="2022-03-24T11:24:13 IST" duration-ms="5466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.testscripts.TC_Amazon_003 -->
+      <class name="com.qa.testscripts.TC_Amazon_004">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_004@7e7be63f]" started-at="2022-03-24T11:23:46 IST" name="setUp" finished-at="2022-03-24T11:24:10 IST" duration-ms="23633" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.amazon.in/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkFieldExists()[pri:0, instance:com.qa.testscripts.TC_Amazon_004@7e7be63f]" started-at="2022-03-24T11:24:10 IST" name="checkFieldExists" finished-at="2022-03-24T11:24:10 IST" duration-ms="323" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Search text field is present on the page]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- checkFieldExists -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testscripts.TC_Amazon_004@7e7be63f]" started-at="2022-03-24T11:24:10 IST" name="tearDown" finished-at="2022-03-24T11:24:12 IST" duration-ms="1479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.testscripts.TC_Amazon_004 -->
+      <class name="com.qa.testscripts.TC_Amazon_005">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_005@6cd28fa7]" started-at="2022-03-24T11:23:46 IST" name="setUp" finished-at="2022-03-24T11:24:04 IST" duration-ms="17768" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.amazon.in/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="userReg(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_005@6cd28fa7]" started-at="2022-03-24T11:24:09 IST" name="userReg" data-provider="getData" finished-at="2022-03-24T11:24:27 IST" duration-ms="17673" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Smith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[smith@test.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userReg -->
+        <test-method signature="userReg(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_005@6cd28fa7]" started-at="2022-03-24T11:24:27 IST" name="userReg" data-provider="getData" finished-at="2022-03-24T11:24:42 IST" duration-ms="15575" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Blake]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[blake@test.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userReg -->
+        <test-method signature="userReg(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscripts.TC_Amazon_005@6cd28fa7]" started-at="2022-03-24T11:24:42 IST" name="userReg" data-provider="getData" finished-at="2022-03-24T11:24:57 IST" duration-ms="14614" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jones]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[jones@test.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userReg -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.testscripts.TC_Amazon_005@6cd28fa7]" started-at="2022-03-24T11:24:57 IST" name="tearDown" finished-at="2022-03-24T11:24:57 IST" duration-ms="415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.testscripts.TC_Amazon_005 -->
+    </test> <!-- Functional Testing -->
+  </suite> <!-- Test Automation -->
+</testng-results>
