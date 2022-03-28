@@ -22,6 +22,8 @@ import com.qa.pages.AmazonPages;
 import com.qa.pages.CitiBankPages;
 import com.qa.pages.RediffPages;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 	WebDriver driver;
 	AmazonPages AmazonOR;
@@ -42,10 +44,12 @@ public class TestBase {
 		prop.load(fileLoc);
 		
 		if(Browser.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver", "D:\\Tools\\SeleniumDrivers\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", "D:\\Tools\\SeleniumDrivers\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}else if(Browser.equalsIgnoreCase("Edge")) {
-			System.setProperty("webdriver.edge.driver", "D:\\Tools\\SeleniumDrivers\\msedgedriver.exe");
+			//System.setProperty("webdriver.edge.driver", "D:\\Tools\\SeleniumDrivers\\msedgedriver.exe");
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 			
