@@ -1,0 +1,40 @@
+Parameterization in BDD framework
+---------------------------------
+
+It is mechanism to parse the test data / input through a parameter (variable).
+
+Parameters can be directly defined with in the acceptance criteria
+
+* Single input parameterization : One input to one line
+
+Repeated input parameterization
+
+* Multiple input to a single line . One line in a code is executed repeatedly. --> Scenario
+* Multiple inputs to single line that exercise the whole scenario --> Scenario outline along with Examples.
+
+----------------------------
+
+Tags in BDD : defining a Scenario / Scenario outline with labels.
+We control the execution of Scenrion / Scenario outline from the runner class by the tags.
+
+The scenario in the feature file should be assigned with a tag
+
+Execute the scenario by it's tagname
+
+
+tags= {"~@SmokeTest"} --> // Executes all the scenario or scenario outline except the one tagged as @SmokeTest
+
+tags= {"@SmokeTest"} --> Execute all the test that has @SmokeTest tagging
+
+tags= {"@End2End,@RegressionalTest"} --> if a scenario / scenario outline is either @End2End or @RegressionalTest
+
+tags= {"@End2End","@RegressionalTest"} --> if a scenario / scenarion outline tagged as @End2End and @RegressionalTest
+
+
+
+
+
+
+
+
+

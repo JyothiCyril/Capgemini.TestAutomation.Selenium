@@ -1,0 +1,174 @@
+1. While co-ordinating the developement task between one or more team members while working remotely.
+2. Dev ops engineer to pull code the for CICD & Continuous Testing to be pipelined on Jenkins
+3. Version controlling System (VCS / SCM ).
+
+it is a system that can record the changes to a file or set of files over time so that you can recall specific version later on.
+
+
+Ex: TestCase 1.0 - 1.9 version --> Build 1.0
+
+TestCase 1.0 : 10 test case --> Review --> Modifications / changes --> Update the document --> TestCase 1.1 --> follow up --> final changes are approved --> TestCase 1.9
+ 
+
+Build 1.0 + new features in Sprint5 --> build 1.2.0
+
+TestCase 1.9 + 20 new test cases for the new features : 30 Test cases --> TestCase 1.2.0 --> review --> Modifications / changes --> Update the document --> TestCase 1.2.1
+
+
+
+GitHub:  GitHub is a repository which is used for version control system and also helps in maintaining the project artifacts / workaround at one common place.
+
+Maintaining the test artifacts on the centralized repository and conducting configuration management ( version control system) --> GitHub
+
+test artifacts : test code , pages, test data, utility, reports, screenshots
+
+git : local repository : local PC
+gitHub : remote repository : hosting server : web application : public /private (org / project)
+
+
+Why git / gitHub?
+
+Git is a version control system used to track the changes in the project deliverables (code / files /document / reports etc.)
+
+It is a tool that manages the code / files/ documents etc and its history while co-ordinating the work with other team members remotely.
+
+Work flow on how to manage the deliverables & structure while working with git.:
+
+Working directory(PC/WS) --> Local git(.git) --> staging (all the file untracked will be tracked) --> save the changes by Commit (local git : .git) --> push / pull to Remote Repo (gitHub)
+
+** When different people belong to same team and have different work around / task / work and that needs to be integrated and maintained in a common place ==? centralized repository --> Local and Remote.
+
+*********************************************************************************
+
+Real - time scenario :
+
+
+The TL create the project template / structure and uploads it to the remote repository
+
+** TL might not want to allow everyone to check-in the project deliverable into the repository.
+
+Purpose : maintain the uniformity and common resources to be accessed by the whole team will be added as collaborators.
+
+collaborators the team member who are given the access to control, modify the project that is uploaded by the TL in the GitHub.
+
+
+The main repository created by the TL (Author) is called as "Master" branch
+
+The individual team members are expected to commit their code in their local branches(ex:branchX) and send the request for review to TL. TL will review the workaround and approve the code only then it can be merged into the main branch (master branch).
+
+
+content BranchX can be merged to Master Branch only upon review and approval.
+
+-----------------------------
+
+Eclispe IDE has a plug in to work with git/gitHub
+
+GitHub is a hosting server for git projects.
+
+git is tool, while gitHub is servide to use git.
+
+
+Project --> local git(.git) --> gitHub(remote)
+
+
+Steps as TL Profile :
+----------------------
+
+1. Create the project / template in Eclipse IDE
+2. create the local repository (.git) --> initialization of the project to git project. -->  git init. --> how to do this with Eclipse.
+3. Add all the files and sub folders in the project folder to be tracked : untracked files should be tracking (staging) --> add to index / git add .
+4. commit the changes to the local repo.
+5. create the empty repository in gitHub * create the repository same as the project name in PC
+6. push the code / project  to remote repository --> master branch
+7.  Add the collaborators
+
+QA profiles:
+------------
+
+1.  receive email notification / invitation to accept the project share
+2. Accepting the invitation
+3. Clone the project for TL -GitHub to the QA local PC
+4. Add files / modify etc.
+5. Add branches--> branch XYZ
+6. track them into the local repository
+7. commit the content of new branchXYZ
+8. create the PR (pull request) : sends the notification TL there is new branch and its content that is shared by the collaborator.
+
+TL Profile :
+------------
+
+8. Open the PR 
+9. Review the content in branch XYZ
+10. merge the content of branch XYZ to a master branch
+
+
+
+
+
+
+
+…or create a new repository on the command line
+echo "# EMS.Capgemini.Demo" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/JyothiCyril/EMS.Capgemini.Demo.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/JyothiCyril/EMS.Capgemini.Demo.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+********************************************************************************************
+
+
+
+CICD : continuous Integration and continuous deployment : technical agile.
+
+It is automated mechanism of integrating and deploying the build on the different environment are scheduled overnight.
+
+Integration and deployment is done every day of the spring cycle.
+
+DevOps engineer to pick the code from the developer's gitHub for integration, perform testing on the integrated build, followed with deployment --> automated
+
+different tools that used and pipelined to perform all these sequence of actions,
+
+Platform 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

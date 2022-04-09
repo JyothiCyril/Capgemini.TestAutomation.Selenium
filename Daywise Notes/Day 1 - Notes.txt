@@ -1,0 +1,279 @@
+Why to automate an application?
+Which are preferred condition to choose Automation testing over manual testing?
+What is automation testing
+About the Test automation tool - Selenium
+Configure the webdriver into Eclipse IDE
+Architecture of WebDriver
+Class diagram for WebDriver interface
+Abstract methods in the WebDriver interface.
+
+***************************************************************************
+
+
+
+Pre-requisite:
+
+1. Software Testing and principles.
+2. Testing activities:
+	1. Test planning
+	2. Test designing
+			1. Writing the test cases (Mandatory)
+			2. Writing the test code  (Decision to automate)
+	3. Test Execution : 2 ways
+			1. Manual Testing : It is a process of observing the application behavior manually and capturing the actual results.
+			2. Automation Testing : The tool will test the application when the scripts is executed.
+	4. Test Evaluation
+
+Software Testing : it is process of verifying and validating the software product for implicit and explicit requirements for both positive and negative test condition.
+
+positive testing : to test a scenario with valid inputs and expected condition
+negative testing : to test a scenario with invalid inputs and unexpected conditions.
+
+Initial Testing : Testing the product / application for the first time after the smoke testing is performed.(ex: 100 TC's executed)
+
+25 test case has deviation and marked as defects
+
+Retesting : Executing the test cases that are failed in the previous test cycle and the developer have rework to fix the deviation. The test case is verified again to check if the defect is reproducible . (only 25 failed test cases from previous test cycles are executed)
+** It is not guarenteed that retesting is done once. This is done several times till the defects are closed.
+
+Retest cycle 1 : 25 test case --> 5 defects are closed / 20 defect are reopened
+Retest cycle 2 : 20 test cases --> 5 defect are closed / 2 defects are new / 15 defect reopen
+Retest cycle 3 : 17 test case
+
+
+Compatiablity Testing : Testing the application against different environments (OS / platform " Windows / Linux / Mac / Andriod / ios etc) --(100 Tc's are executed again in a new environment)
+
+** Development environment is different from the testing environment.
+
+Test Environment is expected to be the simulation of end-user environment.
+
+Cross browser testing : Testing a web application against different browser (chrome / edge / FF / IE/ safari / opera etc.)
+
+
+Regressional Testing : Testing the whole application again and again whenever there is a code modification / changes done to the existing build. Verify if these changes is not impacting the existing functionalities that were already working.
+
+
+
+
+Non-functional : Usability testing, performance, stress , load testing, security etc.
+
+except usuablity testing all the other non-functional testing should be always automated. it cannot be done manually.
+
+Performance testing : It is process of evaluating the application performance by calculating the response time for certain no. of users (Vuser / laod) etc.
+
+
+Automation Testing Tools are categorized into
+
+Technical aspects:
+
+Functional Testing tools : Used to functional behaviour of the application.
+	Open source : Selenium
+	License : UFT , Silk Test , RFT , Tosca etc.
+
+Non-functional Testing tools : Performance testing
+	Open source : JMeter
+	Licensed : LR , Silk Performer, RPT etc.
+	
+Test management tools
+		JIRA , ALM, Mantis etc.
+
+API testing tools/ WebService:
+	Rest- assured, Postmann, SoapUI
+
+Mobile testing tools : Appium
+
+
+******************************************************************************************
+
+What is automation testing?
+
+
+a software (automation tool) testing another software(AUT: application under test).
+
+It is a process of recording and playing back the user events on the AUT to validate the scenario for positive and negative test conditions.
+
+
+Test automation activities are categorized into 2 phases:
+
+1. Test designing phase : articulating / writing  / recording(writing) the test code.
+2. Test execution : playback / execute the test code
+
+What is a test code ? what does it have?
+
+Line of code performs a sequence of actions/ set of actions --> simulating the user action on the AUT.
+
+User actions : examples, click, type, select, drag, drop etc.
+
+When the user events are logically translated into a code using any programing language supported by the automation tool is called as test code.
+
+** Test code : Code used to test the functionality that are defined as per the test scenario / test case that are already documented.
+
+
+The test code when executed should test the functionality of the product.
+
+It is a process of recording (test designing) and playing back (test execution) the user events (actions / interaction / keyboard or mouse transactions to be perfomed) on the AUT to validate the scenario for positive and negative test conditions.
+
+***********************************************************************
+
+Test automation tool - Selenium:
+--------------------------------
+
+Developed by  ThoughtWorks.
+
+Is an open source black box testing tool used test the functionality of a web application from the front end.
+
+How selenium can help to fulfill the test automation needs.
+
+selenium.dev 
+
+components of Selenium:
+-----------------------
+
+1. Selenium IDE (Integrated Development Environment) : Comes a plugin / addon with the FF / Chrome / Edge.
+
+2. Selenium RC(Selenium 1.0 - outdated) / WebDriver (Selenium 2.0 / 3.0 / 4.0)
+WebDriver do not have an interface (IDE), its comes in the form of self-contained libarary based on the choice of language.
+
+Multi language, Multi platform & Multi Browser component
+
+Java , Python, C#, Ruby, JavaScripting.
+Irrespective of OS : Windows / Mac / Linux
+Code written can be executed on different browser provided it is configured based on the need --> Cross browser testing tool
+
+Regressional Testing tools
+
+3. Selenium GRID : Compatibility against different environment
+
+---------------------------------------------------------------
+
+How to configure WebDriver API (.jar / dll) into Eclipse IDE.
+
+
+1. Eclipse IDE(OXygen / JavaEE developer)
+2. Java
+3. Selenium webdriver jar (client libarary) --> Maven dependency(mvnrepository).
+4. Driver binaries (.exe) --> selenium.dev
+5. Chrome / Edge 
+-------------------------------------------------------------------
+
+Eclipse IDE + Selenium library
+
+Eclipse IDE, where WebDriver API is configured will be used as automation tool for writing and executing the test code.
+
+
+WebDriver API :
+
+1. Architecture of WebDriver
+2. Class diagram of WebDriver interface
+
+Translating the test case to a test code.
+
+Test Case : It is a document which describes the step by step to repeate the user requirement on the AUT for positive and negative test conditions.
+
+QA will feed the sequence of step / actions to be perfomed by the user / tool at the time of execution to observe certain expected outcome.
+
+
+Sequence of step are written for Scenario
+
+Test scenario : search an item in Amazon application
+
+Test steps:
+
+1. Open the browser
+2. Launch URL
+3. Select Books as category
+4. Type Da vinci code in search input field
+5. click the magnifier button
+6. get all the items loaded relevant to search item
+7. close the browser.
+
+How to deal with Browser instance / How to write a code that can invoke the browser
+
+Chrome / FF / Edge / IE etc.
+
+1. Download the driver executable from selenium.dev into local PC
+2. Check the version of the browser and corresponding driver binary should be downloaded.
+
+
+
+1. Set the environment variable for chrome browser
+2. Create an object that has the reference for ChromeDriver constructor.
+
+
+
+
+Syntax :
+
+System.setPropert("Key","value");
+
+Chrome:
+System.setPropert("webdriver.chrome.driver","path of driver binary");
+System.setPropert("webdriver.edge.driver","path of driver binary");
+System.setPropert("webdriver.gecko.driver","path of driver binary");
+System.setPropert("webdriver.ie.driver","path of driver binary");
+
+
+Browser --> WebPage --> WebElement(hyperlink/text/radio/button/etc) --> actions(keyboard/ mouse)
+
+*******************************************************
+
+1. Open Browser
+2. Launch Google URL
+3. Get the title of the page
+4. Check if the title of page is in upper case
+5. Close the browser
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

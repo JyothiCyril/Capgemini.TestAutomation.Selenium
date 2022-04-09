@@ -1,0 +1,370 @@
+ Dev ops engineer to pull code the for CICD & Continuous Testing to be pipelined on Jenkins
+****************************************************************************************
+
+Jenkins is CICD platform which is used for continuous integration and continuous deployment.
+
+CICD is a technical agile, where it is an automated approach to integrate and deploy the build against different environment.
+
+CICD has few sequence of step to be perfomed since the time the independent components and unit are been checked-in by developer into a remote repository.
+
+
+As part of CICD, it also important to continuously test the integrated build which needs some test case that are automated.
+
+QA is expected to design the test automation framework such the testing also be scheduled on the CICD engine configured Jenkins.
+
+CICD is schedules every day - Overnight build.
+
+
+Jenkins is pipelined with different tools that can perform CICD.
+
+** Jenkins is integrated with the build mangement tool like Maven to pull the project and execute the pom.xml files 
+
+** As QA, we're expected to design test automation framework that can run as a Maven project on the Jenkins.
+
+
+testng.xml --> testsuite used to execute the group of test. --> Trigger the test execution only from Eclipse IDE that is running on the local PC
+
+With the support of Apache Maven, where the testng.xml file can be executed via pom.xml on different platforms.
+
+Local PC:
+----------
+Run the pom.xml file from Eclipse IDE
+Run the pom.xml file from Apache Maven --> CLI
+Run the pom.xml file from run.bat --> CLI.
+
+
+Run the pom.xml file on Jenkins platform.
+
+Dev-ops engineer will pull the pom.xml file to run on Jenkins platform in a schedule manner.
+
+
+As QA, we're going to conduct a preliminary test on the Jenkins platform to check if it can smoothly scheduled for further building, testing and deploying.
+
+1. How to pull the project from local PC either pom.xml / run.bat file
+2. How to pull the project from GitHub location.
+
+
+******************************************************************************************
+
+
+BDD : Behaviour  Driven Development
+------------------------------------
+
+Agile Methodologies :
+
+SCRUM approach
+
+
+SDLC : Software Development Life Cycle : It is a systematical approach to develop a software.
+
+ * Linear approach, where on completion of one phase, we move to the next phase.
+
+Categorized into different phases.
+
+1. Requirements Gathering phase : BA : gather the client requirement and articulate it into document SRS : System requirement specification
+
+2. Designing phase : Sw Arch : Analyze the requirements and create the design documents : HLD & LLD : UML diagram : Pictorial representation of the requirements.
+
+3. Coding phase : Dev Team : Analyze the requirements and implementing the code to develop the requriement. Code is initially developed in Units.
+	3.1 Unit Testing : Small components / units developed will be tested for its functionality. To check if the code is syntactically and logically correct. --> Past, it was done Manually (convetional model), later while Agile has come into the existance, this is automated using JUnit (Unit testing tool developed Eric Gamma along with KentBeck(Introduced eXtreme Programing one of Agile development model)
+	3.2 Integration Testing : Once the units are integrated to each other, the flow / structure of the connected are tested. -->
+		 Non-incremental approach : Group of units are developed and later it is integrated to a build) --> Conventional model
+		Incremental approach : Once the Unit is developed, it is immediately integrated to another unit to form a build. The Size of build increase as on when the new units are created and immediately added to the existing build) --> Agile Model
+
+4. Testing phase : QA Team : Analyze the requirements and test application from front end to check the functionality and behaviour. --> Black box Testing
+	Functional & Non-functional testing --> System Testing : System as application is tested a whole at the end development cycle to check if the product meets the implicit and explicit clinet requirement
+	User Acceptance Testing : Client / Designated business user :  Executing the product by client / end user to check if the product work as per the requirements defined in the requirment gathering phase, if the user is satisfied with the product will be given an acceptance to release the product.
+
+5. Deployment Phase : The product will be deployed on the client environment.
+
+6. Release phase.
+
+
+
+
+V_Model : Verification and Validation is emphasised alot to bring the quality of the product.
+Verification is a static testing, will help test all the project deliverables before it is given to the next phase. Verification is defect containment process to avoid defect leakage.
+
+Defect containment : It is process of finding and fixing the defects a the early phase of developement.
+
+** Cost of fixing the defects at the testing phase is very expensive.
+** Anything and everything document should be verified / reviewed for defects ensure the check if the organizational standards are well maintained.
+
+Validation : Dynamic Testing : Execute the build developed to check if it working as per clients requirments.
+	White Box Testing : Dev Team : UNit & Integration testing
+	Black Box Testing : QA : System Testing & User : UAT 
+
+2 phases : Test designing + Test Execution phase
+
+Test designing : Writing the test case
+Test Execution  : Execution of Test cases on the build
+
+* Waterfall model Test design & execution is done after coding phase
+*  Starting with V-model : Test designing is done once the requirements are freezed , whereas the test scheduled after coding.
+
+** Before the development, the test designing is performed. --> Identifying the testable requirements and articulating the test case.
+
+Test Case : It is a document which describes the actions / set of actions of to be perfomed by the tester on AUT (application under test)
+
+Test case document contains, the step by step instruction to repeat the user requirements for validating the product for positive and negative test conditions.
+
+Test designing phase : The tester will feed the test cases templates before the execution with Test Case ID, Feature Description, Pre-requisite, Test step, Test data & expected values.
+
+Test execution phase : The tester will run / execute all the test steps to check if the expected values are matching with the application and feeds the actual results and check if there is any deviation --> Manually / Automation using tools.
+
+Waterfall model & V-Model :  12 months
+
+Requirement Gathering (200) : 1month --> Designing(200) :1 month--> Coding ,Unit Testing & Integration Testing (200) : 4 months --> Testing phase ( 200) : 4 months--> Deployed(200) --> Release(200) (2 months)
+
+
+Iteration, Spiral, RAD model, Agile Model 
+
+Requirements are divided into bits and pieces and it is scheduled to be developed in iterations.
+
+In each iteration : few to many requirements are developed : All the phases of SDLC is performed on the selected requirements.
+
+Multiple Waterfall models are performed.
+
+Iteration, Spiral, RAD model : Each iteration is of different duration.
+
+Iteration 1 : 3months, Iteration 2 : 6 months, Iteration 3 : 2 months, Iterationn:x months.
+
+Each iteration can give different size of build with different requirement.
+
+Iteration 1 : 3months
+
+15 days for Requirement gathering
+15 days for designing
+1 Month for developement
+15 days for QA testing
+15 days for Deployments
+
+
+
+** Default Verification
+** Test designing happens once the requirement are freezed.
+
+
+Agile Model : Flexible model, used to develop the product / software.
+
+This adopts the best practices of Iterative and incremental approaches.
+
+Agile is not development life cycle , It is more of methodology with some guidelines, principles and a discipline should be followed by the whole team participating in Agile developments.
+
+1. Agile Manifesto
+2. 12 Principles of Agile
+
+* Will define how agile models are different from the conventional models.
+
+Agile Manifesto:
+
+Individuals and interactions over processes and tools
+Working software over comprehensive documentation
+Customer collaboration over contract negotiation
+Responding to change over following a plan
+
+Team
+Working software
+Responding to changes
+
+________________
+
+Xp
+SCRUM
+Kanban
+Crystal
+Lean
+SaFE etc.
+____________________________________________________________
+
+SCRUM Approach : The product is developed in a iterative and incremental approach.
+Each iteration is for fixed duration any thing between 2-4 weeks --> Sprint
+
+Roles: Whole - team approach
+-------
+* SCRUM Team : Development Team : Developer and Tester : Size : 7 +/-2 --> 5 or 9
+* Product Owner : Bussiness Representative : Collect the requirement from Clients, Stakeholders, End user and articulate Product Backlog : Collection of user stories.
+* SCRUM Master : Mentor  : facilitate the required environment, set up, conduct the meeting. Support to the team to get the task done periodically, Track the progres, Address the issues & challenges.
+
+Meetings : Whole team will participate.
+----------
+
+1. Sprint planning
+2. Daily stand ups
+3. Sprint review
+4. Sprint reterospection
+
+
+
+Sprint : 2 weeks : 14 calendar days
+
+Day 1 : Sprint planning
+Day 14 : Sprint Review and Reterospection
+4 Non-working days : 2 sat & sun
+
+Left over : 8 productive days
+
+It is important to repeat the development cycle in 8 days to develop a potential build.
+
+
+Everyday there is a development and every day there will be an integration and every day there will be testing through out the last day of sprint. --> CICD
+
+** Developer and Tester are day before and day behind.
+Day 2 - Day 13: What is developed today is integrated tonight will be QA test tomorrow.
+
+
+**************************************************************************
+
+
+Conventional model
+
+Development plan is different and Testing plan is different, User acceptance test plan done by the business users are different
+
+
+Customer requirements 
+
+Unit Testing till User acceptance testing : Every level of testing have a different goal.
+
+In conventional model, Developement happens first, testing happens later.
+
+Kent Beck --> eXtreme Programing -> one of Agile development model
+
+Proposed Test - First Approach : Test Driven Development : TDD
+
+Testing should happen before Development to avoid the defect leakages and reduce the cost of fixing the defects.
+
+
+How can a testing be done before development?
+
+A strategy designed to have testing done before and after development.
+
+Test driven developement : Testing is done before coding and after coding
+
+<-------------------------- RED Cycle-------------------------------------------->
+User story --> Unit test cases --> Unit Test method(Junit) --> Execute test  --> Test Failed --> Coding --> Execute Test --> Test Passed
+<------------- GREEEn CYCLE ----------------------->
+
+
+** Test cases designed are developer centric.
+
+Even though there is rigourous testing done, still there are high of defect leakages as testing is not performed from the customer point of view.
+
+
+Unit & Integration testing : Developer
+System Testing : QA
+User acceptance : PO
+
+
+Revisited the TDD : Refined the process of TDD approach from being Developer centric to a Whole team approach centric.
+
+Agenda : Developer, QA, & PO should be on same page while testing a requirement / user story.
+
+From the user stories, the QA team is expected to identify the testable requirements and articulate it to "acceptance criteria"
+
+What is an acceptance criteria ?
+
+are written using GHERKINS language.
+
+Acceptance criteria are the testable requirement written in Given, When, Then.. format. Which is later translate to the test methods using different API .
+
+Acceptance criteria are the step by step instruction that can validate the feature of an application for positive and negative test conditions.
+
+Written that covers both functional and non functional requirements.
+
+Acceptance criteria written by a tester should be review and approved by PO to check if it is in par with requirement.
+
+
+Acceptance criteria is commonly used as base line by the Developer of Developing and unit testing
+Acceptance criteria is commonly used as base line by the tester at the time System testing
+Acceptance criteria is commonly used as base line by the PO at the Sprint review for User acceptance testing.
+
+
+
+
+ATDD : Acceptance Test Driven Development. --> Developement based on Acceptance criteria
+
+
+<-------------------------- RED Cycle-------------------------------------------->
+User story --> Acceptance Criteria--> Unit Test method(Junit) --> Execute test  --> Test Failed --> Coding (Develop the features)--> Execute Test --> Test Passed
+<------------- GREEEn CYCLE ----------------------->
+
+
+Behaviour Driven Development : Automated Testing plan designed to test and application from the front end and check the functional bahaviour of the product based on the Acceptance Criteria.
+
+<-------------------------- RED Cycle-------------------------------------------->
+User story --> Acceptance Criteria--> System Test method--> Execute test  --> Test Failed --> Coding ( Test the features : Selenium) --> Execute Test --> Test Passed
+<------------- GREEEn CYCLE ----------------------->
+http://rlogiacco.github.com/Natural
+
+http://rlogiacco.github.io/Natural
+
+
+*************************************
+
+How to configure Cucumber , Selenium and Junit into an eclipse project to build a BDD framework
+
+1. Natural plug-in : used to create the feature files and write the acceptance criteria using GHERKINS langauge.
+
+2. Configure different API into a project.
+
+
+
+
+In the feature file : acceptance criteria
+
+Identify the feature --> Multiple Scenario --> Steps (give, when, then format)
+
+Feature : What feature to be tested
+
+Scenario: <<What scenario to be validated>>
+Given condition
+Then Action
+When actions
+And Action
+
+
+Scenario: <<What scenario to be validated>>
+Given condition
+Then Action
+When actions
+And Action
+
+1. Create the feature file
+2. write the acceptance criteria
+3. Create the step definition file
+4. create the test runner class
+5. Dry run to generate the correspoding method as per the acceptance criteria
+6. We loaded the step definitiion file with the default code snippets
+7. Added the selenium code.
+8. Triggered test execution.
+
+
+
+In GHERKINS,
+
+Background : same like scenario will always run before start of Scenario
+
+Background are written in given when then format only
+
+Always on the top of all scenarios within a feature file.
+
+Hooks --> test fixtures --> @Before & @After --> cucumber api.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -10,7 +10,7 @@
 		<parameter name="Browser" value="Chrome"></parameter>
 		<parameter name="Url" value="https://www.amazon.in/"></parameter>
 		<classes>			
-			<class name="com.qa.testscripts.TC_Amazon_002" />
+			<class name="com.qa.testscripts.TC_DDTJSON" />
 			<!--  <class name="com.qa.testscripts.TC_Amazon_003" />
 			<class name="com.qa.testscripts.TC_Amazon_004" />
 			<class name="com.qa.testscripts.TC_Amazon_005" />	-->	

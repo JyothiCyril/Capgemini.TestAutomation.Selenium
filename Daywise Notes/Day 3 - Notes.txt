@@ -1,0 +1,214 @@
+Working with Xpath:
+-------------------
+
+
+Why to choose xpath over attribute based. / When do you choose to go with xpath?
+
+1. When attribute based locators are not present or it is not sufficient
+
+
+Priority:
+
+1st HTML ID
+2nd Name
+3rd LinkText
+4th Xpath
+
+
+What is a xPath?
+
+xPath is an address of an element from the HTML strcuture page.
+
+It is represent in a syntax format which is collection different wildcard chars.
+
+How to write an xpath expression?
+
+
+
+
+<input type="text" onblur="fieldTrack(this);" name="name493336bb" value="" style="width:185px;" maxlength="61">
+
+<input type="text" onblur="fieldTrack(this);" name="namecbfc9aba" value="" style="width:185px;" maxlength="61">
+
+
+Full xpath / absolute xpath : Full address of an element start from the root of the page.
+ always uses '/' to traverse to the child elements.
+
+html/body/center/form/div/table[2]/tbody/tr[3]/td[3]/input
+
+relative xpath : shortest path or address of an element. "//" for reaching the elements directly from the descendents.
+
+//table[2]/tbody/tr[3]/td[3]/input
+
+
+Relative can written using functions.
+
+xpath expression by attributes , text(), contains(), groupindex()
+
+xpath by attribute:
+
+//TagName[@AttributeName='AttributeValue']
+
+//input[@maxlength='61']
+
+
+
+
+<input type="button" name="btnchkavailcbfc9aba" value="Check availability" onclick="javascript:getreplies(document.forms[0].logincbfc9aba.value,document.forms[0].namecbfc9aba.value);" class="btn_checkavail">
+
+//*[@value='Check availability'] 
+
+<input type="submit" name="submit" value="Submit" style="background-color: #FACB00;border: 1px solid black;font-family:MS Sans Serif;font-size:15px;">
+
+xpath syntax by text()
+
+//tagname[@text()='Value']
+
+//tagName[contains(text(),'textvalue')]
+
+
+/html/body/center/form/div/table[2]/tbody/tr[3]/td[3]/input
+
+//*[@id="tblcrtac"]/tbody/tr[3]/td[3]/input
+
+***************************************************************************
+
+
+1. Open the browser
+2. Open rediff URL
+3. Click create account link based on link text
+4. Check if the user is landed on registration page
+5. Enter full name as Kim smith
+6. Enter email id as smith_test
+7. click check availality button
+
+
+RediffPages --> all the element in the above scenario should added in the pages.
+
+***************************************************************************************
+
+
+
+TestNG - Next Generation.
+
+It is a testing framework (API : library) used along with Selenium for building the effective automation framework ( guidelines)
+
+TestNG is an API is been inspired by one open source unit testing API called Junit
+
+Junit API used for unit testing the code used by developers.
+
+TestNG is used by the tester for enhancing the test code written using Selenium & Java.
+
+
+1. Install TestNG into Eclipse IDE
+2. Configure the testng library into the project (TestAutomation.Selenium)
+
+How TestNG is used to customize the Selenium Java code?
+What are the features of TestNG that can benefit to enhance the code to increase the modularity & reusablity etc.
+
+Features that can be implemented using TestNG:
+
+1. Will automatically generate the HTML report post execution
+2. Control the flow of execution using different annotations in testng
+3. Prioritization , Enable / Disable the test , grouping etc.
+4. Parallel testing
+5. Cross browser testing
+6. Parameterization --> xml / Object[][]
+7. Assertions : check points
+8. log the status into HTML report
+9. Single test / execute the test suite which one or more can be executed either sequentially or parallely.
+
+
+**************************************************************************
+
+What is an annotation?
+
+Annotations are pre-defined class from TestNG library.
+
+These are used as meta-data to declare a method as a TestNG method.
+
+** The methods will be controlled by the annotation at the run session.
+
+Depends on the type of annotation used.
+
+
+Types of annotations :
+
+1. Annotations used as TestFixtures:
+TestFixtures are the methods used run before  or After a Suite / Test / Class / Method.
+
+The lines of code to be exercised as pre-requisites / post -conditions should be written under these methods.
+
+Pre-conditions : expected to run before a Suite / Test / Class / method
+pre-fixed with "@Before" => @BeforeSuite, @BeforeTest, @BeforeClass, @BeforeMethod.
+
+
+post - conditions : expected to run after a Suite / Test/ Class / method
+pre-fixed with "@After"  --> @AfterSuite, @AfterTest, @AfterClass, @AfterMethod
+
+
+2. Annoation used as Test case : Only one annotation "@Test".
+
+** The nature of @Test annotation is declare a method as test case, that has some potential functionality under test.
+
+A method below the @Test annotation is called as test cases and it is executed to define it the specific test is passed / failed / skipped.
+
+
+3. Annotation used for parameterization : @Parameter & @DataProvider.
+
+** Static methods cannot be annotated.
+
+Structure of TestNG test suite: in the Xml format
+
+Suite --> Test --> Class --> Methods
+
+
+Example : Internet Banking application
+
+Login
+
+1. FundTransfer --> Class 1
+2. CCBillPayment -- > Class 2
+3. UtilityBillPayment --> Class 3
+
+Logout
+
+
+
+**********************************************************************************
+SwitchTo() from WebDriver interface:
+
+Working with multiple windows
+Working with frames
+Working with Alert
+
+***********************************************************************************
+
+1. Open the browser & Launch amazon website www.amazon.in"	
+
+	2. Mouse over on accounts and list element
+	3. Click start here hyperlink
+	4. Enter Full name
+	5. Enter mobile number
+	6. Enter email id
+	7. Enter the password
+	8. Click the Continue button
+
+How to perform mouse interactions on the WebElements using Actions class like mouseOver dragdrop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

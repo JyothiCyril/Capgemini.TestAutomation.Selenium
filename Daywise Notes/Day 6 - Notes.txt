@@ -1,0 +1,216 @@
+JavaScriptExecutor
+TakesScreenshot
+Synchronization Point
+***************************
+
+JavaScriptExecutor interface used to execute JavaScripts action on the driver.
+
+executeScript abs method.
+
+1. Scrolling action on the webPage 
+
+Horizontal & vertical scroll : scroll by certaing pxs.
+Sroll by till presence of a element.
+
+** Exception : Element not interactable
+
+-------------------------------------------
+TakesScreeshot As - WebElement & WebDriver.
+
+getScreenshotAs();
+
+------------------------------------------------
+Exception : Time delay exception.
+The automation is tool is faster that the application under test.
+
+Tool might terminate the execution if there is a prolonged execution delay.
+
+** We need to pause the exection so that the tool can slow down till the application rampup to the speed of the tool.
+
+* The whole code to run in controlled , not sure at what point of time the tool slow down.
+* At a specific point where the application transition happend upon certain action performed via tool ( Module to module transition upon click . ex: Username and password & click login button, the user should be navigated to Inbox module. Navigation from Login to inbox may take certain time
+
+We're not sure how long it might take.
+ response time at every execution is different.
+10 sec, 20 sec, 30, 5 sec etc...
+
+Synhronization Point: It is mechanism to match the anticipated time delay between the tool and application under test.
+
+
+Delay for 40 secs --> max time out how long the tool need to wait.
+
+If it is beyond the timeout the test will terminate with time delay exception.
+
+The default time WebDriver is 0 secs
+
+Options:
+---------
+
+Thread.sleep(timeout) : Thread.sleep(20000) : Eclipse will pause the execution for 20 secs to jump with next line of execution.
+
+PageLoadTimeout : Make the driver instance wait till the page gets loaded.
+implicitWait : Specifies the amount of time the driver should wait when searching for an element if it is not immediately present. 
+start: since the implicit wait is declared till the driver is terminated (driver.close() or driver.quit())
+
+implicit wait will automatically adjust the time till the element is present on the page
+
+
+explicitwait : additional time the tool has to to wait in the specific scenarion till certain conditions are met.
+
+Conditional Vertification.
+
+It needs an explicit declaration.
+
+**********************************************************
+
+Case study:
+-----------
+
+1. Open the browser
+2. Launch https://www.cleartrip.com/flights
+3. Check if one way radio button is selected by default
+4. Enter from location as "Bangalore"
+5. Enter to location as "Hyderabad"
+6. Select the departure date as 31 march
+7. Check what is default value selected in Adults drop down list.
+8. Select Adults as 2
+9. Select Children as 2
+10. Check if More options element is present and click
+11. On click of More options, Check if Class of travel and  Preferred Airline elements are present on the page
+12. Check if Search Flights button is enabled to be clicked.
+13. Check if the user is navigated away to the list of flight options page
+
+** Parameterized step 4 & 5 using Excel for multiple input combinations.
+
+****************************************************************************
+Apache Maven:
+------------
+
+
+develope the code in units / components --> static analysis : reviewing the code --> unit testing --> integrated (jar /war/ ear) --> executed and installed --> deployed on the environemnt.
+
+
+Apache Maven is a build management tool.
+
+1. What is build management?
+2. How Apache maven will be used by developer to develop the build in an uniform and organized approach.
+3. How to used apache maven for test automation using selenium for implemenation of the code in maven style followed with the test suite execution using maven pom.xml file.
+
+
+build management is a process of developing the build in a systematical approach.
+
+What is a build? collection of programs written in small component further integrated to a build
+
+build can be of any form.
+
+Java --> jar / war / ear.
+
+In an application development, development of a build is collaborative task performed by group of developers working remotely.
+
+Dev 1:
+------
+src/main/java
+1. Write the code : unit / component ex: s1.java, s2.java, s3.java --> com.dev.code
+2. compiled.
+src/test/java
+3. unit test the code : Junit ex: s1Test.java, s2Test.java, s3Test.java --> com.dev.unittest
+4. s1.java + s2.java + s3.Java --> sBuild.jar --> target
+5. install and deploy sBuild.jar
+6. reporting 
+
+
+Dev 2:
+------
+
+1. Write the code : unit / component ex: a1.java, a2.java, a3.java --> com.dev.development
+2. compiled.
+3. unit test the code : Junit ex: a1Test.java, a2Test.java, a3Test.java --> --> com.dev.test
+4. a1.java + a2.java + a3.Java --> aBuild.jar --> output
+5. install and deploy sBuild.jar
+6. reporting 
+
+TL : integrate the workaround of Dev 1 & Dev 2
+
+Sample build: Build 1.0
+	sbuild.jar + abuild.jar
+
+
+1. Project creation should be uniform across all the developers
+2. The integration of work around should compatiblity
+3. version controlling.
+4. build the unit into a jar
+5. host the build on the remote repository (local / remote(open forum))
+
+
+selenium jar into the project --> pulling the dependency from mvnrepository
+
+mvnrepository is a centralized hosting server where the developer can host their application on the remote location that can be used by other.
+
+dependency
+*****************************************
+
+1. Project creation using appropriate archetype selection
+2. Customize the project folder as needed for test automation
+3. pom.xml : project , dependency , plug-in section
+4. Plugin : used for different lifecycle ( clean, default, site)
+5. phase of each lifecycle : Goals : commands : plugin
+
+
+
+quickstart archetype:
+
+What is a archetype: it is a default project template that are avaialble while creating maven project.
+
+It will automatically can create the different folder & file structure created.
+
+quickstart archetype:
+
+src/main/java : code to develop the functionality
+src/test/java : code to unit the code written in src/main/java
+JRELibrary : jdk library
+Maven Dependencies : will collection jar that is retrieved from mvnrepository. third party java based API can be download and store into .m2 folder
+src folder --> main & test sub folder : prototype folder for src/main/java and src/test/java
+target --> empty when created. but will have the build.jar & documents / reports will be automatically store after build integration and execution happens.
+pom.xml : heart of maven project : Creation , implementation and execution of java build is controlled by the pom.xml file.
+
+
+
+
+Clean lifecycle : mvn clean : clean the project repository for previous execution
+maven-clean-plugin
+-----------------------------------------------------------------------------
+
+Default lifecycle : validation till integration of build.
+
+validate : validate the resources / artifacts in the src/main/java & src/test/java : maven-resources-plugin
+compile : compile the code in src/main/java and src/test/java
+maven-compiler-plugin
+
+mvn test
+test : unit testing using Junit
+maven-surefire-plugin : surefire plug will run the unit test case available in src/test/java folder.
+
+mvn build:
+integrate : build integration into jar/war/ear
+
+mvn install
+install : build executes after integration
+deploy : deployement
+
+-----------------------------------
+
+Site lifecycle : reports and store in target folder
+
+
+
+
+
+How to configure testng.xml file in the pom.xml to run the test suite.
+
+under surefire plugin
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+ExtentReports
+--------------
+
+Why ExtentReports?
+
+While with Test automation using Selenium do not have in-built mechanism to capture the test results post execution.
+
+Though TestNG API will generate the HTML report post execution,yet it get appended upon every execution.
+
+We will not be able reterospect on the previous test execution results.
+
+ExtentReport API to generate the HTML report for every test execution.
+
+1. HTML report for every execution
+2. Customizable with all the test status capture (Passed / Faile / Skipped)
+3. Represent the overall test summary in graphical representation --> pie chart format.
+4. Screenshots of the failed test to the HTML report.
+
+
+
+1. Configure the library with ExtentReports
+2. Write a generic class that can run on every test execution to read test execution results and generate the HTML report.
+
+
+************************************************
+com.qa.pages:
+OrgangeHRMPages.java
+	add all the elements description - Create a pageobjectmodel.
+
+
+com.qa.testscript
+1. TestBase.class
+setUp(): read the browser and url details from testng.xml file
+1. Open the browser ** Cross browser testing
+2. Launch URL 
+3. Initialize the Page Object model
+
+tearDown():
+1. close browser.
+
+2. TC_Login.java extends TestBase
+public void Login(){
+// Write the code to login to the module ** username and password should be fetched from credentials.properties file.
+// check if the user is landed on the dash board page --> Asserts in TestNG
+}
+
+** Login credentials for User name & password should be stored in Credentials.properties file under com.qa.testdata package.
+
+
+** Execution should be triggered only from testng.xml file
+** upon execution, the HTML report should be created under Reports folder.
+
+********************************************************************
+

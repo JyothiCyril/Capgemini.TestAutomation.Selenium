@@ -1,0 +1,52 @@
+Acceptance Criteria : testable requirement used while Unit Testing, System Testing & User Acceptance Testing, which are identified from the user stories. that common between the developers, tester and po.
+
+Acceptance criteria is a step by step instruction that repeats the user requirments to validate an application for both positive and negative test conditions
+
+Acceptance criteria should be :
+1.Instructionally correct
+2.Conceptually correct
+3.Gramatically correct
+4.written in present future tense
+5.Logical flow
+6.Not too elaborative or abstract
+
+
+are written using GHERKINS language: Given, when, then and etc,
+
+*******************
+Given some precondition
+When I do some action
+Then I expect some result
+*******************
+Scenario – the name for the behavior that will be described
+Given – the beginning state of the scenario
+When – specific action that the user makes
+Then – the outcome of the action in “When”
+And – used to continue any of three previous statements
+***********************
+Acceptance criteria are the testable requirement written in Given, When, Then.. format. Which is later translate to the test methods using different API .
+
+Acceptance criteria are the step by step instruction that can validate the feature of an application for positive and negative test conditions.
+
+Written that covers both functional and non functional requirements.
+
+Acceptance criteria written by a tester / PO should be review and approved by PO to check if it is in par with requirement.
+
+
+Acceptance criteria is commonly used as base line by the Developer of Developing and unit testing
+Acceptance criteria is commonly used as base line by the tester at the time System testing
+Acceptance criteria is commonly used as base line by the PO at the Sprint review for User acceptance testing.
+
+Definitions from Google:
+
+Acceptance Criteria Definition 1: “Conditions that a software product must satisfy to be accepted by a user, customer or other stakeholder.” (via Microsoft Press)
+
+Acceptance Criteria Definition 2: “Pre-established standards or requirements a product or project must meet.” (via Google)
+
+** Acceptance Criteria are written before Implementation.
+
+What are a few traits of effective acceptance criteria?
+* Acceptance criteria should be testable. Since these requirements help formulate the definition of done for your engineers, they need to be easy to test. And the results of these tests must leave no room for interpretation. Tests should reveal straightforward yes/no or pass/fail results.
+* Criteria should be clear and concise. You aren’t writing comprehensive documentation here. Keep your criteria as simple and straightforward as possible.
+* Everyone must understand your acceptance criteria. Your criteria is useless if your developers can’t understand it. If you’re unsure about whether something is clear, take the time to ask and make adjustments until things are clear.
+* Acceptance criteria should provide user perspective. Acceptance criteria is a means of looking at the problem at hand from a customer’s standpoint. It should be written in the context of a real user’s experience.

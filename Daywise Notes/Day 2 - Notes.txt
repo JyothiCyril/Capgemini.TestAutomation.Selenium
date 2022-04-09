@@ -1,0 +1,347 @@
+What is the systematical appraoch to do an automation testing using Selenium - Test automation process using Selenium.
+--------------------------------------------------------------------------------------------
+
+Test scenario : search an item in Amazon application
+
+Test steps:
+
+1. Open the browser
+2. Launch URL
+3. Select Books as category
+4. Type Da vinci code in search input field
+5. click the magnifier button
+6. get all the items loaded relevant to search item
+7. close the browser.
+
+
+Browser to be launched --> URL should be loaded --> user will be landed on home page --> has different elements (Category drop down list, Search item text field, Magnifier button)
+
+
+Test designing and Test Execution of the test code should performed systematically.
+
+
+Code should be in par the test scenario & should also meet the test automation guidelines.
+
+What is the scenario to automate --> test case document.
+
+What are the test automation guidelines?
+
+Guidelines are considered to be the best practices followed while automating an application.
+
+1. Organized : Test artifact should be maintained in an organized approach.
+2. Optimized : reduce the lines of code, where ever it is possible
+3. Reusable : Lines of code and elements in the test code should be reusable.
+4. Modular
+5. Readablity.
+
+Pre-requisite:
+----------------
+
+1. Test cases to be automated
+2. Test automation tool should be configured
+3. Build should be stable and tested atleast once.
+
+Process of automating an application in a systematical / step by step approach is called as Test Automation Framework / Test automation process.
+
+Test automation activities : Test Designing + Test Execution + Test Maintenance.
+
+categorized into 3 phases:
+
+1. Implementation phase : Test designing : articulating the test code as per the test scenario and test automation guidelines.
+
+2. Execution phase : Test execution : Executing the test code against the application by configuring it in different platforms.
+
+3. Maintenance phase : Test maintenance : Maintaining the test artifacts on the centralized repository and conducting configuration management ( version control system)
+
+
+** each phase comprises of one to many steps to achieve it successfully.
+
+Structure of test code: 
+
+Lines of code which performs actions / set of actions on AUT.
+
+Test code is the collection of test objects, test object description, method, test data & expected outcomes.
+
+Elements in the test code:
+
+testobject : object under test : WebElements
+test object description : physical description / object reference that will used by the tool to recognize the WebElement at run session. --> Locators.
+method : action / set of actions to be performed on the element
+test data : input data / sourcing the input data (valid / invalid)
+expected outcomes should be also captured : WHat a tool has observe when the above sequence actions are performed.
+
+WebElement:
+----------
+Type:
+Locator:
+Action:
+Input:
+
+Implementation phase:
+
+1. Analyzing the test scenario & identify the webelement / gui elements / entity / test object
+
+2. Create the GUI reference : It is a mechanism to identify the elements present on the page using locators(test object description, which are unique and stable). Locators will teach the tool to identify the WebElement / test object at run session fo further interaction
+		1. Locators in Selenium
+		2. Page Object Model
+3. Create the test script : It is process of converting actions mentioned in the test case to a test code.
+		support of WebDriver API --> WebDriver Interface, WebElement interface : class & interface of WebDriver API are to be used.
+
+4. Customize the test script : Ensure the test scripts is enhanced as per the test scenario (test case) and test automation guidelines (above pointers)
+
+		Multiple input testing by reading the data from external sources (excel/txt/database)
+		Checkpoint
+		Loc to be reusable
+		Exception to be handled
+		Reports
+		screenshots
+
+	WebDriver API + Java + TestNG + APache poi + common io + extent report etc.
+
+5. Debug the test script : check the test script for syntax and logical errors.
+
+
+2. Execution phase : Apache Maven , Jenkins 
+--------------------
+
+6. Run the test : Execute the test script against the application to validate the results.
+					1. Run the test independently
+					2. Run the group of test --> test suite --> testng.xml
+					3. Run test suite , testng.xml file from a pom.xml using eclipse ide , Apache Maven.
+					4. Run the test suite on Jenkins platform (pom.xml)
+
+7. View the test results : either passed / failed ( EV ! = AV)
+8. Capture the test results : HTML format with some demographic representations along with screenshot to be captured if the test is failed.
+
+3. Manitenace phase :
+---------------------
+
+9. Maintaining the test artifacts on the centralized repository and conducting configuration management ( version control system) --> GitHub
+
+test artifacts : test code , pages, test data, utility, reports, screenshots
+
+****************************************************************************************
+
+
+Object Identification in Selenium:
+----------------------------------
+Objects are the WebElement in Selenium that need the support of locators to reach / identify at the time of execution.
+
+Locator:
+---------
+
+Why? we need to reach the element / uniquely identify the element / instruct the test automation tool to identify the elements.
+
+
+What is a locators : is a unique test object description / properties that are defined in the Selenium library.
+
+What are different types of locators:
+
+Locators are categorized into 2 types:
+	
+		1. Attribute based locator : Derived from the HTML design of a page
+
+			1. HTML ID : Unique ID for an element. : 1st priority for identification. Unique & stable. Speed of identification.
+
+			2. Name : 2nd priority in speed of identification. ** It cannot be used for identification if the value of name changes dynamically.
+
+			3. Class Name : Last priority. ** One or more element can have same class name which cannot be used for single object identification. ** If the value of the class name has a space it cannot be used for identification.
+
+			4. Link Text : ** Only used for hyperlinks : 3rd priority
+			5. Partial Link Text
+
+			6. TagName : Name of tag. Mostly used to recognize one or more element of same category.
+
+		2. Structure based locator : rely on the structure of the page : It is an alternative mechanism to fetch a locator for an element. When all the Attribute based properties are exhausted or it is not sufficient.
+
+			1. Xpath : Expression / Syntax used to reach the element on the HTML page by its position.
+
+	1. Abs xpath
+	2. Rel xpath
+
+			2. CSS
+
+
+** Not every attribute in the HTML code can be used for direct identification of an element.
+** The attribute should belong to the locators list in Selenium library.
+** Even the locators are duplicated / changing dynamically: ensure, the locators are unique in scope and stable by nature
+** no two elements can have same locators to reach single object
+** element description / locator,  if it is changing dynamically it can be used for identification.
+
+
+How to fetch a locator:
+-----------------------
+Search Text field:
+------------------
+HTML Code:
+-----------
+<input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search">
+
+<input id="nav-search-submit-button" type="submit" class="nav-input nav-progressive-attribute" value="Go" tabindex="0">
+
+Locators: 
+----------
+tagName = input ** matches one or more elements
+id="twotabsearchtextbox" --> 1st priority
+name="field-keywords" --> 2nd priority
+class="nav-input nav-progressive-attribute"
+
+** Amongst the locators which are fit to be used for identification:
+
+** how to feed the locator in the test code?
+
+2 ways:
+	1. Using findElement() & findElements() method along with By class from WebDriver
+	2. Create the pages using Page model model as design pattern which uses @FindBy & @FindAll and PageFactory class
+
+
+------------------------
+
+How to feed the locators with in a code to reach the elements on page.
+
+
+
+
+
+linkText
+
+Jet fuel price hiked by over 18%, touch all-time high
+
+
+partial linkText
+Jet fuel price
+hiked by over 18%
+
+LinkText
+Welcome, UserName
+
+Login changes as Kim Smith
+
+LinkText
+Welcome, Kim Smith
+
+partial link text
+Welcome, 
+
+************************************
+
+Case study 1 :
+
+1. Open the browser
+2. Launch Rediff Url
+3. Check if your on home page
+4. Click Sign in link
+5. Check if your navigated away to Login page.
+6. Close the browser.
+
+Case study 2 :
+
+1. Open the browser
+2. Launch "https://demo.guru99.com/test/newtours/" Url
+3. Enter username as mercury
+4. Enter password as mercury
+5. Click Submit button
+6. Click flights link
+7. Check if the user is landed on book a flight page.
+8. Select the passenger count as '2'
+9. Select departure location as "London"
+10. Select arrival location as "Paris"
+8. Close the browser.
+
+UserName & Password should sourced from properties --> credentials.properties
+Passenger count, Departure & Arrival location should be fetched from Excel sheet (demonstrated multiple inputs)
+
+**********************************************************************
+
+<span class="a-size-medium a-color-base a-text-normal">The Da Vinci Code: A Novel: 2 (Robert Langdon)</span>
+
+
+<span class="a-size-medium a-color-base a-text-normal">The Da Vinci Code: (Robert Langdon Book 2)</span>
+
+
+<span class="a-size-medium a-color-base a-text-normal">Davinci Code</span>
+
+
+<span class="a-size-medium a-color-base a-text-normal">Greatest Works of Edgar Allan Poe</span>
+
+
+tagName : span
+class="a-size-medium a-color-base a-text-normal
+
+convert the attribute to xpath locator using a syntax.
+
+Syntax : //tagName[@Attribute Name='Value']
+
+//span[@class='a-size-medium a-color-base a-text-normal']
+
+
+Case study 3:
+-------------
+
+1. Open Browser
+2. Launch Google URL
+3. Type <<SearchItem>> in search field
+4. Get all the items displayed from the auto suggest drop list
+5. Sumit the input
+6. Check the title has search term or not
+7. close the browser
+
+Automation Testing
+Functional Testing
+Performance Testing
+
+* Create the POM as GooglePages in com.qa.pages
+* add all the element and its description into GooglePages
+* create the methods that can return the WebElement
+* Create a argument based constructor to inilize the element in the class against the driver instance.
+
+
+
+
+
+
+
+************************************************
+
+Page Object Model is Selenium is a design pattern use create a class that can operate as Object Repository.
+
+Object Repository is a terminology in automation testing tool, is place holder where, the test object description will save for reusablity.
+
+A class that holds the test object description and a methods that returns a WebElement is called as "Pages"
+
+Ex:
+
+
+EmployeeManagementSystem application --> com.qa.pages
+
+AddEmployee : 10 elements (5 field.2 link, 3 button etc
+DeleteEmployee : 5 (3 fields, 2 buttons)
+Login
+ModifyEmployee
+
+AddEmpPages.java ---> all the elements and its reference of AddEmployee module.
+DeleteEmpPage.java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

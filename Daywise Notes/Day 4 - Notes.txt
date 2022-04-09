@@ -1,0 +1,104 @@
+Parameterization / Data Driven Testing : It is mechanism to drive the data from external sources and given as input to the application.
+
+Why is it called as parameterization?
+
+
+After fetching the data, the values are stored into a parameter / variable, the constants with the code is replaced with the parameter.
+
+As the data / inputs are source through a parameter, it is called as parameterization.
+
+What can be parameterized in a code?
+
+Any source of inputs can be replaced with parameter.
+
+
+How to read the data from Excel and parse it to the @DataProvider Method.
+
+
+1. Configure Apache poi library into the maven project
+
+2. Generic class that had the method to read the data from an excel file systematically
+
+1. Open the file in an input mode (read the data) --> FileInputStream (java.io)
+2. The file opened in the input mode should be recognized as excel work book --> XSSFWorkbook (Apache poi)
+3. Reach the specific sheet from an excel workbook --> by Id / name --> XSSFSheet
+4. Total no. of row --> XSSFRow
+5. Reach each cell from every row and read the data from the cell in String format --> XSSFCell
+
+
+3. Call the methods from the generic class and source them to the Object[][] in the @DataProvider method.
+
+
+------------------------------------------------------------
+
+Parameterization using properties.
+
+Single input testing, and data is expected sourced from properties files.
+
+
+***************************
+
+Topics completed:
+-----------------
+
+Automation Introduction
+Configure the Selenium WebDriver  in Eclipse IDE into Maven project
+Selenium Architecture
+Class diagram for WebDriver
+Abstract methods with WebDriver
+Locators in Selenium
+Page Object Model
+Working with Links, Text, Button, Select, Check & radio
+Working with frames, window, alerts
+Working with actions class
+TestNG : 
+	
+1. Will automatically generate the HTML report post execution: appended : Only latest execution reports can be viewed.
+2. Control the flow of execution using different annotations in testng
+3. Prioritization , Enable / Disable the test , grouping etc.
+4. Parallel testing
+5. Cross browser testing
+6. Parameterization --> xml / Object[][]
+7. Assertions : check points
+8. log the status into HTML report
+9. Single test / execute the test suite which one or more can be executed either sequentially or parallely.
+
+Parameterization using Excel, xml, properties
+
+
+Pending:
+----------
+
+ExtentReports
+JavaScriptExecutor
+TakeScreenshot
+BDD cucumber 
+
+
+2. Execution phase : Apache Maven , Jenkins 
+--------------------
+
+6. Run the test : Execute the test script against the application to validate the results.
+					1. Run the test independently - Done
+					2. Run the group of test --> test suite --> testng.xml - Done
+					3. Run test suite , testng.xml file from a pom.xml using Apache Maven.
+					4. Run the test suite on Jenkins platform (pom.xml)
+
+7. View the test results : either passed / failed ( EV ! = AV)
+8. Capture the test results : HTML format with some demographic representations along with screenshot to be captured if the test is failed.
+
+3. Manitenace phase :
+---------------------
+
+9. Maintaining the test artifacts on the centralized repository and conducting configuration management ( version control system) --> GitHub
+
+
+
+
+
+
+
+
+
+
+
